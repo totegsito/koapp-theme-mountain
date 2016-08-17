@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+
+    <title>mountain-menu demo</title>
+
+    <script src="../../../../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../../../../../bower_components/paper-styles/demo-pages.html">
+    <link rel="import" href="../../mountain-item/mountain-item.html">
+    <link rel="import" href="../mountain-menu.html">
+    <link rel="import" href="../mountain-submenu.html">
+
+    <style is="custom-style">
+      .horizontal-section {
+        padding: 0 !important;
+      }
+
+      .avatar {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+        background: #ccc;
+      }
+
+      mountain-item {
+        --item: {
+          cursor: pointer;
+        };
+      }
+
+      .sublist mountain-item {
+        padding-left: 30px;
+      }
+
+      .sublist2 mountain-item {
+        padding-left: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="horizontal-section-container">
+      <div>
+        <h4>Standard</h4>
+        <div class="horizontal-section">
+          <mountain-menu>
+            <mountain-item>Inbox</mountain-item>
+            <mountain-item>Starred</mountain-item>
+            <mountain-item>Sent mail</mountain-item>
+            <mountain-item>Drafts</mountain-item>
+          </mountain-menu>
+        </div>
+      </div>
+
+      <div>
+        <h4>Pre-selected</h4>
+        <div class="horizontal-section">
+          <mountain-menu selected="0">
+            <mountain-item>Inbox</mountain-item>
+            <mountain-item disabled>Starred</mountain-item>
+            <mountain-item>Sent mail</mountain-item>
+            <mountain-item>Drafts</mountain-item>
+          </mountain-menu>
+        </div>
+      </div>
+
+      <div>
+        <h4>Multi-select</h4>
+        <div class="horizontal-section">
+          <mountain-menu multi>
+            <mountain-item>Bold</mountain-item>
+            <mountain-item>Italic</mountain-item>
+            <mountain-item>Underline</mountain-item>
+            <mountain-item>Strikethrough</mountain-item>
+          </mountain-menu>
+        </div>
+      </div>
+
+      <div>
+        <h4>Sub-menu</h4>
+        <div class="horizontal-section">
+          <mountain-menu attr-for-item-title="label" multi>
+            <mountain-submenu label="mountain-menu">
+              <mountain-item class="menu-trigger">mountain-menu</mountain-item>
+              <mountain-menu class="menu-content sublist" multi>
+                <mountain-submenu label="Properties">
+                  <mountain-item class="menu-trigger">Properties</mountain-item>
+                  <mountain-menu class="menu-content sublist2">
+                    <mountain-item>focusedItem</mountain-item>
+                    <mountain-item>attrForItemTitle</mountain-item>
+                  </mountain-menu>
+                </mountain-submenu>
+                <mountain-submenu label="Methods">
+                  <mountain-item class="menu-trigger">Methods</mountain-item>
+                  <mountain-menu class="menu-content sublist2">
+                    <mountain-item>select(value)</mountain-item>
+                  </mountain-menu>
+                </mountain-submenu>
+            </mountain-menu>
+          </mountain-submenu>
+
+          <mountain-submenu label="mountain-submenu">
+            <mountain-item class="menu-trigger">mountain-submenu</mountain-item>
+            <mountain-menu class="menu-content sublist">
+              <mountain-submenu label="Properties">
+                <mountain-item class="menu-trigger">Properties</mountain-item>
+                <mountain-menu class="menu-content sublist2">
+                  <mountain-item>opened</mountain-item>
+                </mountain-menu>
+                </mountain-submenu>
+                <mountain-submenu label="Methods">
+                  <mountain-item class="menu-trigger">Methods</mountain-item>
+                  <mountain-menu class="menu-content sublist2">
+                    <mountain-item>open()</mountain-item>
+                    <mountain-item>close()</mountain-item>
+                    <mountain-item>toggle()</mountain-item>
+                  </mountain-menu>
+              </mountain-submenu>
+            </mountain-menu>
+          </mountain-submenu>
+
+            <mountain-submenu label="Unavailable" disabled>
+              <mountain-item class="menu-trigger">Unavailable</mountain-item>
+              <mountain-menu class="menu-content sublist">
+                <mountain-item>Unavailable 1</mountain-item>
+                <mountain-item>Unavailable 2</mountain-item>
+              </mountain-menu>
+            </mountain-submenu>
+          </mountain-menu>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

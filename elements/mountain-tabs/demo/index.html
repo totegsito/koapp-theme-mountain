@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+  <head>
+    <title>mountain-tabs demo</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+
+    <script src="../../../../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../../../../../bower_components/iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../../../../bower_components/iron-flex-layout/iron-flex-layout.html">
+    <link rel="import" href="../../mountain-toolbar/mountain-toolbar.html">
+    <link rel="import" href="../mountain-tab.html">
+    <link rel="import" href="../mountain-tabs.html">
+
+    <style is="custom-style" include="demo-pages-shared-styles">
+      #container {
+        max-width: 600px;
+      }
+
+      .vertical-section {
+        margin: 0 0 40px;
+      }
+    </style>
+  </head>
+  <body unresolved>
+    <div id="container" class="vertical-section-container centered">
+      <h3>Plain <code>mountain-tabs</code>.</h3>
+      <div class="vertical-section">
+        <mountain-tabs selected="0">
+          <mountain-tab>ITEM ONE</mountain-tab>
+          <mountain-tab>ITEM TWO</mountain-tab>
+          <mountain-tab>ITEM THREE</mountain-tab>
+        </mountain-tabs>
+      </div>
+
+      <h3>
+        The <code>scrollable</code> attribute causes the tabs to scroll, rather
+        than compress, when there is not enough space. Arrow buttons appear when
+        any of the tabs are not completely visible.
+      </h3>
+      <div class="vertical-section">
+        <mountain-tabs selected="0" scrollable>
+          <mountain-tab>NUMBER ONE ITEM</mountain-tab>
+          <mountain-tab>ITEM TWO</mountain-tab>
+          <mountain-tab>THE THIRD ITEM</mountain-tab>
+          <mountain-tab>THE ITEM FOUR</mountain-tab>
+          <mountain-tab>FIFTH</mountain-tab>
+          <mountain-tab>THE SIXTH TAB</mountain-tab>
+          <mountain-tab>NUMBER SEVEN</mountain-tab>
+          <mountain-tab>EIGHT</mountain-tab>
+          <mountain-tab>NUMBER NINE</mountain-tab>
+          <mountain-tab>THE TENTH</mountain-tab>
+          <mountain-tab>THE ITEM ELEVEN</mountain-tab>
+          <mountain-tab>TWELFTH ITEM</mountain-tab>
+        </mountain-tabs>
+      </div>
+
+      <h3>
+        Tab layout is effected by the writing direction of the surrounding area.
+      </h3>
+      <div class="vertical-section">
+        <div dir="rtl">
+          <mountain-tabs selected="0">
+            <mountain-tab>ITEM ONE</mountain-tab>
+            <mountain-tab>ITEM TWO</mountain-tab>
+            <mountain-tab>ITEM THREE</mountain-tab>
+          </mountain-tabs>
+          &nbsp;
+          <mountain-tabs selected="0" scrollable>
+            <mountain-tab>NUMBER ONE ITEM</mountain-tab>
+            <mountain-tab>ITEM TWO</mountain-tab>
+            <mountain-tab>THE THIRD ITEM</mountain-tab>
+            <mountain-tab>THE ITEM FOUR</mountain-tab>
+            <mountain-tab>FIFTH</mountain-tab>
+            <mountain-tab>THE SIXTH TAB</mountain-tab>
+            <mountain-tab>NUMBER SEVEN</mountain-tab>
+            <mountain-tab>EIGHT</mountain-tab>
+            <mountain-tab>NUMBER NINE</mountain-tab>
+            <mountain-tab>THE TENTH</mountain-tab>
+            <mountain-tab>THE ITEM ELEVEN</mountain-tab>
+            <mountain-tab>TWELFTH ITEM</mountain-tab>
+          </mountain-tabs>
+        </div>
+      </div>
+
+      <h3>
+        Tabs can be used in a <code>mountain-toolbar</code>.
+      </h3>
+      <div class="vertical-section">
+        <style is="custom-style">
+          .self-end {
+            /* This mixin (from iron-flex-layout) aligns the tabs to the
+               bottom of the toolbar. */
+            @apply(--layout-self-end);
+          }
+        </style>
+
+        <mountain-toolbar class="tall">
+          <mountain-tabs selected="0" class="bottom self-end" style="width: 300px;">
+            <mountain-tab>ITEM ONE</mountain-tab>
+            <mountain-tab>ITEM TWO</mountain-tab>
+          </mountain-tabs>
+        </mountain-toolbar>
+      </div>
+    </div>
+  </body>
+</html>

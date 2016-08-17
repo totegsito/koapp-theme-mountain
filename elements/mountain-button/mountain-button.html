@@ -1,0 +1,92 @@
+<link rel="import" href="../../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../../bower_components/koa-behaviors/koa-button-behavior.html">
+<link rel="import" href="../../styles/default-theme.html">
+
+<dom-module id="mountain-button">
+  <template>
+    <style>
+      :host {
+        display: block;
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        background: var(--button-primary-background-color, --primary-background-color);
+        background: -webkit-linear-gradient(45deg, var(--light-primary-color), var(--primary-background-color));
+        background: -o-linear-gradient(45deg, var(--light-primary-color), var(--primary-background-color));
+        background: -moz-linear-gradient(45deg, var(--light-primary-color), var(--primary-background-color));
+        background: linear-gradient(45deg, var(--light-primary-color), var(--primary-background-color));
+        text-align: center;
+        font-weight: lighter;
+        text-transform: capitalize;
+        outline-width: 0;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        z-index: 0;
+        margin: var(--button-margin, .5em 0);
+        padding: .5em 0.57em;
+
+        @apply(--button);
+      }
+
+      :host([disabled]) {
+        background: #eaeaea;
+        color: #a8a8a8;
+        cursor: auto;
+        pointer-events: none;
+
+        @apply(--button-disabled);
+      }
+
+      :host([pressed]) {
+        opacity: .33;
+      }
+
+      :host:not([disabled]){
+        color:white;
+      }
+
+      :host(:not([link]):not([disabled])) {
+
+      }
+
+      :host([big]) {
+        font-size: 1.2em;
+      }
+
+      :host(:not([big]):not([link]).keyboard-focus) {
+        font-weight: bold;
+
+        @apply(--button-keyboard-focus);
+      }
+
+      :host([big].keyboard-focus) {
+        font-weight: bold;
+
+        @apply(--button-big-keyboard-focus);
+      }
+
+      :host([link].keyboard-focus) {
+        font-weight: bold;
+
+        @apply(--button-link-keyboard-focus);
+      }
+    </style>
+
+    <!-- write your template here -->
+    <content></content>
+    <!-- end template -->
+  </template>
+
+  <script>
+    Polymer({
+      is: 'mountain-button',
+
+      behaviors: [
+        Polymer.KoaButtonBehavior
+      ]
+    });
+  </script>
+</dom-module>

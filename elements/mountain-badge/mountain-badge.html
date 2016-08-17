@@ -1,0 +1,74 @@
+<link rel="import" href="../../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../../../../bower_components/koa-behaviors/koa-badge-behavior.html">
+<link rel="import" href="../../styles/default-theme.html">
+
+<dom-module id="mountain-badge">
+  <template>
+    <style>
+      :host {
+        display: block;
+        position: absolute;
+        outline: none;
+      }
+
+      :host([hidden]) {
+        display: none !important;
+      }
+
+      koa-icon {
+        --iron-icon-width: 18px;
+        --iron-icon-height: 18px;
+      }
+
+      .badge {
+        @apply(--layout);
+        @apply(--layout-center-center);
+
+        background-color: var(--badge-background, --accent-color);
+        border-radius: 20px;
+        color: var(--badge-text-color, white);
+        font-weight: lighter;
+        font-size: var(--badge-font-size, inherit);
+
+        height: var(--badge-height, 30px);
+        min-width: var(--badge-width, 30px);
+        margin-bottom: var(--badge-margin-bottom, 0px);
+        margin-left: var(--badge-margin-left, 0px);
+
+        opacity: var(--badge-opacity, 1.0);
+
+        @apply(--badge);
+      }
+
+      .badge koa-icon{
+          font-size: 18px;
+      }
+
+      .badge #badge-text:not([hidden]){
+        text-align: center;
+        white-space: nowrap;
+        width: 100%;
+        padding: 0 15%;
+      }
+
+    </style>
+
+    <!-- write your template here -->
+    <div class="badge">
+      <koa-icon hidden$="{{!_computeIsIconBadge(icon)}}" icon="{{icon}}"></koa-icon>
+      <span id="badge-text" hidden$="{{_computeIsIconBadge(icon)}}">{{label}}</span>
+    </div>
+    <!-- end template -->
+  </template>
+
+  <script>
+    Polymer({
+      is: 'mountain-badge',
+
+      behaviors: [
+        Polymer.KoaBadgeBehavior
+      ]
+    });
+  </script>
+</dom-module>

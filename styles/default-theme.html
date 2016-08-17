@@ -1,0 +1,82 @@
+<style is="custom-style">
+  /*
+   Polymer includes a shim for CSS Custom Properties that we can use for application theming.
+   See https://www.polymer-project.org/1.0/docs/devguide/styling.html#xscope-styling-details
+   for further information on custom CSS properties.
+   */
+
+  /* General styles */
+
+  :root {
+    --primary-text-color: #46697D;
+    --primary-background-color: #19C8E1;
+    --secondary-text-color: #ffffff;
+    --disabled-text-color: #9b9b9b;
+    --divider-color: #dbdbdb;
+    --primary-color: #24c1ee;
+    --light-primary-color: #00CDCD;
+    --dark-primary-color: #303f9f;
+    --accent-color: #46697D;
+    --light-accent-color: #ff80ab;
+    --dark-accent-color: #f50057;
+    --error-color: #F86867;
+
+    --background-color: #f6f6f6;
+    --background-image: none;
+
+    --primary-font-family: 'Hind Guntur';
+    --title-font-family: 'Hind Guntur';
+
+    --primary-font-weight: lighter;
+    --primary-font-size: 16px;
+  }
+
+  body {
+    background-color: var(--primary-color);
+  }
+
+  [role="menu"]{
+    background: transparent;
+  }
+
+  [role="menu"] a>paper-item[role="option"]{
+    font-size: var(--primary-font-size);
+    font-weight: lighter;
+    color: var(--secondary-text-color);
+  }
+
+  .panel[drawer]{
+    /*background: var(--primary-background-color);*/
+    background: -webkit-linear-gradient(60deg, var(--menu-light-primary-color, --light-primary-color),
+                                    var(--menu-primary-background-color, --primary-background-color));
+    background: -o-linear-gradient(60deg, var(--menu-light-primary-color, --light-primary-color),
+                                    var(--menu-primary-background-color, --primary-background-color));
+    background: -moz-linear-gradient(60deg, var(--menu-light-primary-color, --light-primary-color),
+                                    var(--menu-primary-background-color, --primary-background-color));
+    background: linear-gradient(60deg, var(--menu-light-primary-color, --light-primary-color),
+                                    var(--menu-primary-background-color, --primary-background-color));
+  }
+
+  .panel #header{
+    background: transparent!important;
+  }
+
+  .panel #header .logo img {
+    border: none;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    max-height: 150px!important;
+    margin: 33% 0 10%;
+    display: block;
+    background-color: white;
+  }
+
+  span.title{
+    color: white;
+    font-weight: lighter;
+    letter-spacing: .5px;
+  }
+
+
+</style>

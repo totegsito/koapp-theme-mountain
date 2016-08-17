@@ -1,0 +1,63 @@
+{
+  "name": "koapp-theme-mountain",
+  "identifier": "koapp-theme-mountain",
+  "description": {
+    "en-US" : "mountain"
+  },
+  "version": "0.0.0",
+  "author": "totegsito, <pacoquesmun@gmail.com>",
+  "category": [
+    ""
+  ],
+  "price": 0,
+  "platforms": [
+    "android",
+    "ios",
+    "windows"
+  ],
+  "showOn": {
+    "market": true
+  },
+  "images" : {
+    "list" : "themes/koapp-theme-mountain/images/list.png",
+    "screenshots" : [
+      "themes/koapp-theme-mountain/images/screenshot01.png",
+      "themes/koapp-theme-mountain/images/screenshot02.png"
+    ],
+    "popover" : "themes/koapp-theme-mountain/images/popover.png",
+    "banner" : "themes/koapp-theme-mountain/images/banner.png"
+  },
+  "defaultConfig": {
+    "colors": {
+      "primaryTextColor": "#212121",
+      "primaryBackgroundColor": "#ffffff",
+      "secondaryTextColor": "#737373",
+      "disabledTextColor": "#9b9b9b",
+      "dividerColor": "#dbdbdb",
+      "primaryColor": "#3f51b5",
+      "lightPrimaryColor": "#c5cae9",
+      "darkPrimaryColor": "#303f9f",
+      "accentColor": "#ff4081",
+      "lightAccentColor": "#ff80ab",
+      "darkAccentColor": "#f50057",
+      "errorColor": "#dd2c00",
+      "backgroundColor": "#ffffff"
+    },
+    "images": {
+      "background": ""
+    },
+    "fonts": {
+      "primaryFontFamily": {
+        "name": "",
+        "url": ""
+      },
+      "titleFontFamily": {
+        "name": "",
+        "url": ""
+      }
+    },
+    "menu": "polymermenu"
+  },
+  "subscription": false,
+  "main": "themes/koapp-theme-mountain/koapp-theme-mountain.html"
+}
