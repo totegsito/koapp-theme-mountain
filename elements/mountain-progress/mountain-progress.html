@@ -10,30 +10,36 @@
         display: block;
         position: relative;
         overflow: hidden;
+        border-radius: 100px;
       }
 
       #progressContainer {
+        border-radius: 100px;
         position: relative;
       }
 
       #progressContainer,
       .indeterminate::after {
+        border-radius: 100px;
         height: var(--progress-height, 4px);
       }
 
       #primaryProgress,
       #secondaryProgress,
       .indeterminate::after {
+        border-radius: 100px;
         @apply(--layout-fit);
       }
 
       #progressContainer,
       .indeterminate::after {
+        border-radius: 100px;
         background-color: var(--progress-container-color, #e0e0e0);
       }
 
       :host(.transiting) #primaryProgress,
       :host(.transiting) #secondaryProgress {
+        border-radius: 100px;
         -webkit-transition-property: -webkit-transform;
         transition-property: transform;
 
@@ -59,17 +65,20 @@
           -webkit-transform-origin: left center;
         transform-origin: left center;
         will-change: transform;
+        border-radius: 100px;
       }
 
       #primaryProgress {
+        border-radius: 100px;
         background: var(--button-primary-background-color, --primary-background-color);
-        background: -webkit-linear-gradient(90deg, var(--light-primary-color) .30%, var(--primary-background-color));
-        background: -o-linear-gradient(90deg, var(--light-primary-color) 30%, var(--primary-background-color));
-        background: -moz-linear-gradient(90deg, var(--light-primary-color) 30%, var(--primary-background-color));
-        background: linear-gradient(90deg, var(--light-primary-color) 30%, var(--primary-background-color));
+        background: -webkit-linear-gradient(90deg, var(--dark-primary-color) .30%, var(--primary-background-color));
+        background: -o-linear-gradient(90deg, var(--dark-primary-color) 30%, var(--primary-background-color));
+        background: -moz-linear-gradient(90deg, var(--dark-primary-color) 30%, var(--primary-background-color));
+        background: linear-gradient(90deg, var(--dark-primary-color) 30%, var(--primary-background-color));
       }
 
       #secondaryProgress {
+        border-radius: 100px;
         background-color: var(--progress-secondary-color, #b7e1cd);
       }
 
@@ -86,6 +95,8 @@
         animation: indeterminate-bar 2s linear infinite;
           -webkit-transform-origin: right center;
         transform-origin: right center;
+        border-radius: 100px;
+
       }
 
       :host(:not([disabled])) #primaryProgress.indeterminate::after {
@@ -94,6 +105,8 @@
         animation: indeterminate-splitter 2s linear infinite;
           -webkit-transform-origin: center center;
         transform-origin: center center;
+        border-radius: 100px;
+
       }
 
       @-webkit-keyframes indeterminate-bar {

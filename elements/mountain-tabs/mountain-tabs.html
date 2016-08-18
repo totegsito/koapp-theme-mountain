@@ -11,9 +11,17 @@
         @apply(--layout);
         @apply(--layout-center);
 
-        background-color: var(--tabs-background-color, --primary-color);
+        background: var(--tabs-light-primary-color, --primary-background-color);
+        background: -webkit-linear-gradient(45deg, var(--tabs-light-primary-color, --light-primary-color),
+                                            var(--tabs-primary-background-color, --primary-background-color));
+        background: -o-linear-gradient(45deg, var(--tabs-light-primary-color, --light-primary-color),
+                                      var(--tabs-primary-background-color, --primary-background-color));
+        background: -moz-linear-gradient(45deg, var(--tabs-light-primary-color, --light-primary-color),
+                                      var(--tabs-primary-background-color, --primary-background-color));
+        background: linear-gradient(45deg, var(--tabs-light-primary-color, --light-primary-color),
+                                      var(--tabs-primary-background-color, --primary-background-color));
         color: var(--tabs-text-color, white);
-        height: 48px;
+        height: 60px;
         font-size: 14px;
         font-weight: 500;
         overflow: hidden;
@@ -25,6 +33,7 @@
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         -webkit-tap-highlight-color: transparent;
 
+        padding: 1em 12px;
         @apply(--tabs);
       }
 
@@ -42,7 +51,7 @@
       }
 
       #tabsContent {
-        height: 100%;
+        height: 90%;
         -moz-flex-basis: auto;
         -ms-flex-basis: auto;
         flex-basis: auto;
@@ -63,8 +72,20 @@
       }
 
       #tabsContent > ::content > * {
-        height: 100%;
+        height: 90%;
       }
+
+      #tabsContent > ::content > mountain-tab:first-child{
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+      }
+
+      #tabsContent > ::content > mountain-tab:last-child{
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+      }
+
+
     </style>
 
     <!-- write your template here -->

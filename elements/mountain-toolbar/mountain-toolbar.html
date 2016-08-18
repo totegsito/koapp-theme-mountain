@@ -54,6 +54,10 @@
         @apply(--toolbar-content);
       }
 
+      .toolbar-tools > [role="tablist"]{
+        padding: 0;
+      }
+
       /*
        * TODO: Where should media query breakpoints live so they can be shared between elements?
        */
@@ -153,6 +157,11 @@
         right: 0;
         top: auto;
         width: auto;
+      }
+
+      .toolbar-tools > ::content > mountain-tabs {
+        padding: 0;
+        background: transparent;
       }
 
       /**

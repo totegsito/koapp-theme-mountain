@@ -13,8 +13,13 @@
 
         cursor: pointer;
         overflow: hidden;
-        padding: 0 12px;
+        padding: 0;
         position: relative;
+        width: 25%;
+        font-size: 16px;
+
+        color: var(--tab-text-color, --secondary-text-color);
+        border: calc( 2px/2 ) solid var(--tab-border-color, --secondary-text-color);
 
         @apply(--tab);
       }
@@ -38,6 +43,11 @@
         transition: opacity 0.1s cubic-bezier(0.4, 0.0, 1, 1);
 
         @apply(--tab-content);
+      }
+
+      :host.iron-selected{
+        background: var(--tab-selected-background, --secondary-text-color);
+        color: var(--tab-selected-color, --primary-background-color);
       }
 
       :host(:not(.iron-selected)) > .tab-content {
