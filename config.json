@@ -1,11 +1,11 @@
 {
-  "name": "koapp-theme-mountain",
+  "name": "Mountain",
   "identifier": "koapp-theme-mountain",
   "description": {
     "en-US" : "mountain"
   },
   "version": "0.0.0",
-  "author": "totegsito, <pacoquesmun@gmail.com>",
+  "author": "Francisco Quesada Muñoz, <pacoquesmun@gmail.com>",
   "category": [
     ""
   ],
@@ -29,31 +29,31 @@
   },
   "defaultConfig": {
     "colors": {
-      "primaryTextColor": "#212121",
-      "primaryBackgroundColor": "#ffffff",
-      "secondaryTextColor": "#737373",
+      "primaryTextColor": "#46697D",
+      "primaryBackgroundColor": "#19C8E1",
+      "secondaryTextColor": "#ffffff",
       "disabledTextColor": "#9b9b9b",
       "dividerColor": "#dbdbdb",
-      "primaryColor": "#3f51b5",
-      "lightPrimaryColor": "#c5cae9",
-      "darkPrimaryColor": "#303f9f",
-      "accentColor": "#ff4081",
+      "primaryColor": "#24c1ee",
+      "lightPrimaryColor": "#0AD2C8",
+      "darkPrimaryColor": "#00d7be",
+      "accentColor": "#00D7BE",
       "lightAccentColor": "#ff80ab",
       "darkAccentColor": "#f50057",
-      "errorColor": "#dd2c00",
-      "backgroundColor": "#ffffff"
+      "errorColor": "#F86867",
+      "backgroundColor": "#f6f6f6"
     },
     "images": {
       "background": ""
     },
     "fonts": {
       "primaryFontFamily": {
-        "name": "",
-        "url": ""
+        "name": "Hind Guntur",
+        "url": "https://fonts.googleapis.com/css?family=Hind+Guntur:100"
       },
       "titleFontFamily": {
-        "name": "",
-        "url": ""
+        "name": "Hind Guntur",
+        "url": "https://fonts.googleapis.com/css?family=Hind+Guntur:100"
       }
     },
     "menu": "polymermenu"
