@@ -29,24 +29,51 @@
 
     --primary-font-weight: lighter;
     --primary-font-size: 16px;
+
   }
 
-  body {
+  :root > ::content {
     background-color: var(--primary-color);
   }
 
-  [role="menu"]{
-    background: transparent;
+  :root > ::content h1 {
+
   }
 
-  [role="menu"] a>paper-item[role="option"]{
+  :root iron-selector.paper-drawer-panel > #drawer.paper-drawer-panel {
+    background: var(--primary-background-color)!important;
+    background: background: -webkit-linear-gradient(60deg, var(--menu-light-primary-color, --light-primary-color),
+    var(--menu-primary-background-color, --primary-background-color))!important;
+    background: -o-linear-gradient(60deg, var(--menu-light-primary-color, --light-primary-color),
+    var(--menu-primary-background-color, --primary-background-color))!important;
+    background: -moz-linear-gradient(60deg, var(--menu-light-primary-color, --light-primary-color),
+    var(--menu-primary-background-color, --primary-background-color))!important;
+    background: linear-gradient(60deg, var(--menu-light-primary-color, --light-primary-color),
+    var(--menu-primary-background-color, --primary-background-color))!important;
+  }
+
+  :root > ::content form[is="iron-form"] > [name]:first-of-type{
+    margin-top: 1.5em;
+  }
+
+  :root > ::content form[is="iron-form"] > [name]:last-of-type{
+    margin-bottom: 3em;
+  }
+
+  [role="menu"] {
+    background: transparent;
+    height: 100%;
+  }
+
+  [role="menu"] a > paper-item[role="option"] {
     font-size: var(--primary-font-size);
     font-weight: lighter;
     color: var(--secondary-text-color);
   }
 
-  .panel[drawer]{
+  .panel[drawer] {
     /*background: var(--primary-background-color);*/
+    background: var(--primary-background-color);
     background: -webkit-linear-gradient(60deg, var(--menu-light-primary-color, --light-primary-color),
                                     var(--menu-primary-background-color, --primary-background-color));
     background: -o-linear-gradient(60deg, var(--menu-light-primary-color, --light-primary-color),
@@ -57,7 +84,7 @@
                                     var(--menu-primary-background-color, --primary-background-color));
   }
 
-  .panel #header{
+  .panel #header {
     background: transparent!important;
   }
 
@@ -72,11 +99,16 @@
     background-color: white;
   }
 
-  span.title{
+  span.title {
     color: white;
     font-weight: lighter;
     letter-spacing: .5px;
   }
+
+  /*.module[ng-controller] > * :not([role="button"]):not(mountain-card):not(mountain-badge){
+    width: 95%;
+    margin: 0 auto;
+  }*/
 
 
 </style>

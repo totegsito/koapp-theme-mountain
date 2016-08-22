@@ -20,14 +20,14 @@
         min-height: var(--item-body-three-line-min-height, 88px);
       }
 
-      :host([two-line]) > div:first-child, :host([thre-line]) > div:first-child {
-        font-weight: bold;
-      }
-
       :host > ::content > * {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+      }
+
+      :host > ::content > :not([secondary])  {
+        font-weight: bold;
       }
 
       :host > ::content [secondary] {
